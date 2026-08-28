@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anti-AI Default UI"
+  short_description: "Block generic AI web and app design defaults"
+  default_prompt: "Use $anti-ai-default-ui to create or review this interface."
