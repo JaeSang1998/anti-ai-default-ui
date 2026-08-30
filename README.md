@@ -37,7 +37,7 @@ The [`skills` CLI](https://github.com/vercel-labs/skills) installs this reposito
 npx skills add JaeSang1998/anti-ai-default-ui
 ```
 
-That installs into the current project, under `./.claude/skills/anti-ai-default-ui/` for Claude Code, and records the resolved version in `skills-lock.json`. Add `-g` to install for the current user instead, and `-a` to name agents rather than selecting them interactively.
+That installs into the current project, under `./.claude/skills/anti-ai-default-ui/` for Claude Code, and writes a `skills-lock.json` recording the source and a content hash of what was installed. Add `-g` to install for the current user instead, and `-a` to name agents rather than selecting them interactively.
 
 ```sh
 npx skills add JaeSang1998/anti-ai-default-ui -g -a claude-code -a codex

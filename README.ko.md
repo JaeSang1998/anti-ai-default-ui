@@ -37,7 +37,7 @@
 npx skills add JaeSang1998/anti-ai-default-ui
 ```
 
-이 명령은 현재 프로젝트에 설치한다. Claude Code라면 `./.claude/skills/anti-ai-default-ui/`에 들어가고, 설치된 버전은 `skills-lock.json`에 기록된다. 사용자 전역으로 설치하려면 `-g`를, 에이전트를 직접 고르는 대신 지정하려면 `-a`를 붙인다.
+이 명령은 현재 프로젝트에 설치한다. Claude Code라면 `./.claude/skills/anti-ai-default-ui/`에 들어가고, 설치한 내용의 출처와 해시가 `skills-lock.json`에 기록된다. 사용자 전역으로 설치하려면 `-g`를, 에이전트를 직접 고르는 대신 지정하려면 `-a`를 붙인다.
 
 ```sh
 npx skills add JaeSang1998/anti-ai-default-ui -g -a claude-code -a codex
