@@ -2,6 +2,8 @@
 
 [![skills.sh](https://skills.sh/b/JaeSang1998/anti-ai-default-ui)](https://skills.sh/JaeSang1998/anti-ai-default-ui)
 
+**English** · [한국어](README.ko.md)
+
 A strict negative design guardrail for web and app work: a prohibition list an agent reads before it writes or edits an interface.
 
 Ask two different agents for a pricing page and you tend to get the same page. A gradient behind the header, an eyebrow pill above a centered headline, gray subcopy, three equal cards, a tinted icon tile on every row. These are defaults rather than decisions. They show up whether or not the product needs them, and they survive review because they look finished. This list takes them off the table, so the remaining choices have to come from the product.
