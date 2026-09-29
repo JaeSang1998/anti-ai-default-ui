@@ -4,7 +4,7 @@
 
 **English** · [한국어](README.ko.md)
 
-A strict negative design guardrail for web and app work: a prohibition list an agent reads before it writes or edits an interface.
+A strict negative design guardrail for web, app, and dashboard work: a prohibition list an agent reads before it writes or edits an interface.
 
 Ask two different agents for a pricing page and you tend to get the same page. A gradient behind the header, an eyebrow pill above a centered headline, gray subcopy, three equal cards, a tinted icon tile on every row. These are defaults rather than decisions. They show up whether or not the product needs them, and they survive review because they look finished. This list takes them off the table, so the remaining choices have to come from the product.
 
@@ -18,10 +18,14 @@ The repository keeps one canonical instruction file, `SKILL.md`. Codex reads it 
 - **Geometry and layout** — one border radius shared by buttons, avatars, modals, and panels; even 8-point spacing applied without regard to content; pages assembled from stacked floating rectangles.
 - **Icons and components** — a thin-stroke icon library standing in for visual identity, icons centered in tinted rounded squares, a differently colored tile for each feature.
 - **Game and HUD drift** — ordinary software dressed as a command center: glowing status lamps, XP-like meters, crosshairs, all-caps micro-headings, pseudo-military status language.
+- **False signals and leaked copy** — unverified "verified" badges, progress indicators without a process, and text copied from the prompt or implementation discussion.
+- **Dashboards and data** — widget inventories without a reading order, oversized low-value charts, clipped tables, unexplained axes, buried results, repeated totals, and unsupported comparisons.
 - **Hierarchy and content** — size differences with no attention hierarchy, muted text that costs readability, color as the only channel for status or validation, and styling done before real copy, data, and empty, loading, and error states exist.
 - **Process** — accepting the first generated layout and changing only its colors, using a component library as the product’s identity, adding novelty to avoid looking AI-generated.
 
 `SKILL.md` holds the full list. The bullets above are its categories.
+
+The dashboard additions were informed by [SANE](https://github.com/JTech-CO/SANE) and keep this repository's strict prohibition format.
 
 ## What it does not do
 
@@ -68,7 +72,7 @@ The included `CLAUDE.md` already contains that import, so no duplicate instructi
 
 **Codex.** Invoke the skill by name with `$anti-ai-default-ui`. `agents/openai.yaml` supplies the display name and the default prompt Codex offers: *Use $anti-ai-default-ui to create or review this interface.*
 
-**Claude Code.** A skills-directory install loads when the work matches the skill description, which is creating or editing an interface. The `CLAUDE.md` import behaves differently: it keeps the rules in context for every turn in that project. Choose the import when you want the list always on.
+**Claude Code.** A skills-directory install loads when the work matches the skill description, which is creating, editing, or reviewing an interface. The `CLAUDE.md` import behaves differently: it keeps the rules in context for every turn in that project. Choose the import when you want the list always on.
 
 ## Example
 

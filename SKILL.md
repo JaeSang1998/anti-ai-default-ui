@@ -1,11 +1,11 @@
 ---
 name: anti-ai-default-ui
-description: Prohibit recurring generic AI-generated web and app design patterns when creating or editing an interface.
+description: Prohibit recurring generic AI-generated web, app, and dashboard design patterns when creating, editing, or reviewing an interface.
 ---
 
 # Anti-AI Default UI
 
-Use this skill when creating or editing a web or app interface. This is a strict prohibition list. Do not suggest alternative visual treatments, design directions, or compensating stylistic moves in this skill. If the user explicitly requests an exception, follow that request; otherwise, do not use any prohibited pattern.
+Use this skill when creating, editing, or reviewing a web or app interface. This is a strict prohibition list. Do not suggest alternative visual treatments, design directions, or compensating stylistic moves in this skill. If the user explicitly requests an exception, follow that request; otherwise, do not use any prohibited pattern. Do not waive a prohibition by merely calling the pattern intentional or tasteful.
 
 ## Prohibited visual defaults
 
@@ -16,6 +16,8 @@ Use this skill when creating or editing a web or app interface. This is a strict
 - Generic abstract 3D objects, floating spheres, or decorative AI imagery with no product meaning.
 - Decorative gradients, blurs, textures, shadows, or glows added merely to make an empty interface look finished.
 - Multiple pastel accent colors used only to decorate repeated UI elements.
+- Neon-on-charcoal palettes or unrelated chart, filter, and status colors chosen for a technical look instead of a consistent information scheme.
+- Inter, JetBrains Mono, IBM Plex Mono, Archivo, or another familiar font used as an automatic identity choice; monospace used across ordinary prose merely to look technical.
 
 ## Prohibited hero and marketing templates
 
@@ -27,6 +29,7 @@ Use this skill when creating or editing a web or app interface. This is a strict
 - Generic SaaS copy, interchangeable benefit claims, invented social proof, invented metrics, and placeholder testimonials.
 - Product marketing sections whose headings and text could describe an unrelated SaaS product without changes.
 - Decorative device mockups or product screenshots that do not depict real product content or states.
+- Dashboard headlines, welcome slogans, and benefit copy that take space from the user's current task.
 
 ## Prohibited cards, borders, and containment
 
@@ -64,6 +67,7 @@ Use this skill when creating or editing a web or app interface. This is a strict
 - Buttons, controls, inputs, menus, and surfaces that all share the same rounded, softly elevated appearance.
 - Hover effects limited to a small lift, a larger shadow, a border-color shift, or a generic fade-and-slide animation.
 - Decorative motion, staggered entrance animations, and page-wide reveal choreography.
+- Emoji used as default feature icons, status symbols, or decoration instead of meaningful content.
 
 ## Prohibited game, HUD, and console drift
 
@@ -80,6 +84,24 @@ Use this skill when creating or editing a web or app interface. This is a strict
 - Gamified hover, press, selection, completion, loading, or error effects that make ordinary software feel like an arcade interface.
 - Decorative danger, success, warning, or achievement styling applied to neutral information.
 
+## Prohibited false signals and leaked copy
+
+- “Active,” “verified,” “live,” or similar badges with no real source of truth, meaningful alternative state, or user-facing purpose.
+- Pulsing indicators, progress bars, percentages, and counters that imply a live process or measured value when none exists.
+- User-facing text that repeats the prompt, design brief, framework, editor, implementation choice, or internal rationale without helping the user complete a task.
+
+## Prohibited dashboard and data defaults
+
+- Starting with every available chart, metric, filter, and table instead of a clear user question, task, or reading order.
+- Filters placed far from the content they control, or a selected range or scope that the user cannot see while interpreting the result.
+- Giving the largest area to a chart because it looks impressive even though it offers little task value, hides the useful marks in empty plotting space, or repeats an already clear fact.
+- Data tables that expose every field by default, clip key cells, hide essential values behind hover, or show sort and filter controls that do not work.
+- Axes, values, rates, and legends whose quantity, unit, period, category, or denominator must be guessed or found in a distant heading; essential meanings available only on hover.
+- Important results buried in tiny numerals or secondary labels while a less relevant measure gets the main visual encoding.
+- Trend arrows, comparisons, percentages, or rankings without a valid baseline and consistent filters; presenting missing data as zero or inventing values to fill gaps.
+- Repeating the same total across a KPI card, chart, progress strip, and summary without adding a new comparison or task-relevant context.
+- One-off type sizes, padding, corner radii, and chart-label styles that make peer elements inconsistent; shrinking essential text to make a dense layout fit.
+
 ## Prohibited hierarchy and content defaults
 
 - Size hierarchy without an unambiguous attention hierarchy.
@@ -90,6 +112,8 @@ Use this skill when creating or editing a web or app interface. This is a strict
 - Styling before real copy, realistic content length, real data, empty states, loading states, error states, permission states, offline states, and narrow-screen behavior exist.
 - Desktop layouts simply stacked on mobile without reconsidering hierarchy or content density.
 - Layouts that fail with long Korean copy, localized text, larger text settings, or representative data.
+- Misaligned SVGs, icons, labels, row baselines, or controls left uncorrected in the rendered interface.
+- Numeric comparisons whose alignment, precision, or units change across rows or charts without a data reason.
 
 ## Prohibited workflow defaults
 
@@ -101,4 +125,4 @@ Use this skill when creating or editing a web or app interface. This is a strict
 
 ## Final guardrail
 
-Before delivering an interface, remove every prohibited pattern above. Do not propose replacement styling in this skill. If removing a pattern leaves an unresolved product or hierarchy question, stop and ask the user for the missing product direction rather than inventing a new visual treatment.
+Before delivering an interface, remove every prohibited pattern above. For dashboards, check labels, numbers, tables, and controls against the actual data and rendered screen. Do not propose replacement styling in this skill. If removing a pattern leaves an unresolved product or hierarchy question, stop and ask the user for the missing product direction rather than inventing a new visual treatment.
